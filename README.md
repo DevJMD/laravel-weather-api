@@ -84,8 +84,7 @@ php artisan test
 ```
 
 ### 5. Postman Endpoints
-You can export/view the endpoints here. For obvious security purposes, registration is not a feature. 
-You can authenticate with:
+For obvious security purposes, registration is not a feature. You can authenticate with:
 - Email: `demo@demo.com`
 - Password: `password`
 
@@ -93,6 +92,8 @@ You can authenticate with:
 and "Local" to test a local build.
 
 This information should already be filled in. View it here:
+
+Public endpoint is for testing-only. No data is stored in a real database.
 
 https://www.postman.com/infrasym/workspace/reasondigital/collection/960020-41f7109f-d425-47ab-89bd-d6234c688051?ctx=documentation
 
