@@ -7,6 +7,7 @@ use App\Http\Requests\API\GetCurrentWeatherRequest;
 use App\Http\Requests\API\GetForecastWeatherRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Log;
 
 class WeatherController extends Controller
 {
@@ -19,6 +20,11 @@ class WeatherController extends Controller
 	{
 		$response = weather()->current($request);
 
+		/**
+		 * Debug.
+		 */
+		Log::info(json_encode($request->all()));
+
 		return response()->json($response);
 	}
 
@@ -30,6 +36,11 @@ class WeatherController extends Controller
 	public function getForecast (GetForecastWeatherRequest $request) : JsonResponse
 	{
 		$response = weather()->forecast($request);
+
+		/**
+		 * Debug.
+		 */
+		Log::info(json_encode($request->all()));
 
 		return response()->json($response);
 	}
