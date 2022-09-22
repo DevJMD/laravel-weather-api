@@ -23,7 +23,7 @@ class JsonRequest
 		 * This will ensure that the returned `Content-Type` is `application/hal+json`,
 		 * and will return a JSON response for all requests.
 		 */
-		$request->headers->set('Accept', 'application/hal+json');
+		$request->headers->set('Accept', 'application/json');
 
 		/**
 		 * Continue request as usual.
