@@ -53,7 +53,6 @@ class WeatherDataTransform
 				'current' => [
 					'temperature' => $data['current']['temp_c'],
 					'condition' => $data['current']['condition']['text'],
-					'condition_icon' => $data['current']['condition']['icon'],
 					'wind_speed' => $data['current']['wind_kph'],
 					'wind_direction' => $data['current']['wind_dir'],
 					'humidity' => $data['current']['humidity'],
