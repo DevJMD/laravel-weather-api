@@ -13,9 +13,8 @@ environment (using 𝑘=𝑣) enables us to create abstract interfaces that can 
 ## Requirements
 - PHP 8.1+ (Necessary for enumeration and intersection/union type checking)
 - Composer 2.0+
-- API Key for one or both of the following APIs:
+- API Key for Weather API:
 	- [WeatherAPI](https://www.weatherapi.com/)
-	- [OpenWeatherMap](https://openweathermap.org/)
 
 ## Optional Requirements
 - MySQL - can use SQLite if you don't have MySQL installed.
@@ -33,7 +32,7 @@ from the dashboard on your account. Note the following key:
 ### 2. Setup
 1. Clone the repository:
 ```bash
-git clone https://github.com/DevJMD/ReasonWeather.git && cd reason-weather
+git clone https://github.com/DevJMD/laravel-weather-api.git && cd laravel-weather-api
 ``` 
 2. Install Composer dependencies:
 ```bash
@@ -60,7 +59,12 @@ DB_USERNAME=<your-mysql-server-username>
 DB_PASSWORD=<your-mysql-server-password>
 ```
 
-7. Migrate and seed the database:
+7. Generate a new JWT secret:
+```bash
+php artisan jwt:secret
+```
+
+8. Migrate and seed the database:
 ```bash
 php artisan migrate --seed
 ```
@@ -84,6 +88,9 @@ You can export/view the endpoints here. For obvious security purposes, registrat
 You can authenticate with:
 - Email: `demo@demo.com`
 - Password: `password`
+
+**Don't forget to set the Environment in the top-right of Postman.** Set it to "Production" to test live,
+and "Local" to test a local build.
 
 This information should already be filled in. View it here:
 
