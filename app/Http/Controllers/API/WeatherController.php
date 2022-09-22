@@ -23,7 +23,7 @@ class WeatherController extends Controller
 		/**
 		 * Debug.
 		 */
-		Log::info(json_encode($request->all()));
+		Log::info('Request data: ' . json_encode($request->all()));
 
 		return response()->json($response);
 	}
@@ -40,7 +40,7 @@ class WeatherController extends Controller
 		/**
 		 * Debug.
 		 */
-		Log::info(json_encode($request->all()));
+		Log::info('Request data: ' . json_encode($request->all()));
 
 		return response()->json($response);
 	}
