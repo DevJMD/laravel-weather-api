@@ -18,14 +18,7 @@ class WeatherController extends Controller
 	 */
 	public function getCurrent (GetCurrentWeatherRequest $request) : JsonResponse
 	{
-		/**
-		 * Debug.
-		 */
-		Log::info('Request data: ' . json_encode($request->all()));
-		Log::info('Query Passed in: ' . $request->request->get('query'));
-
 		$response = weather()->current($request);
-
 
 		return response()->json($response);
 	}
@@ -37,14 +30,7 @@ class WeatherController extends Controller
 	 */
 	public function getForecast (GetForecastWeatherRequest $request) : JsonResponse
 	{
-		/**
-		 * Debug.
-		 */
-		Log::info('Request data: ' . json_encode($request->all()));
-		Log::info('Query Passed in: ' . $request->request->get('query'));
-
 		$response = weather()->forecast($request);
-
 
 		return response()->json($response);
 	}
