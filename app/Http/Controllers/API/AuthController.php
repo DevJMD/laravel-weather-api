@@ -27,6 +27,11 @@ class AuthController extends Controller
 	 */
 	public function login (Request $request) : JsonResponse
 	{
+		$request->validate([
+			'email' => 'required|email|max:128',
+			'password' => 'required|string|min:8|max:128',
+		]);
+
 		$credentials = $request->only('email', 'password');
 
 		if ( $token = auth()->guard('api')->attempt($credentials) ) {

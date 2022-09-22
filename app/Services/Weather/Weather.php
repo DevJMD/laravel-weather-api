@@ -10,6 +10,7 @@ use App\Http\Requests\API\GetForecastWeatherRequest;
 use App\Transforms\HypertextApplicationLinkTransform;
 use App\Transforms\WeatherDataTransform;
 use GuzzleHttp\Exception\GuzzleException;
+use Illuminate\Support\Facades\Log;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use Psr\Http\Message\MessageInterface;
@@ -166,6 +167,11 @@ abstract class Weather implements WeatherInterface
 		 * Merge the API key required to make authenticated API requests.
 		 */
 		$payload['key'] = $this->apiKey;
+
+		/**
+		 * Debug.
+		 */
+		Log::info('Payload: ' . json_encode($payload));
 
 		return $payload;
 	}

@@ -6,6 +6,7 @@ use Exception;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Cache;
 use GuzzleHttp\Exception\GuzzleException;
+use Illuminate\Support\Facades\Log;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use Psr\SimpleCache\InvalidArgumentException;
@@ -37,6 +38,11 @@ class HttpService implements HttpServiceInterface
 		 * Create a unique request key to use for caching.
 		 */
 		$key = md5($url . json_encode($parameters));
+
+		/**
+		 * Debug.
+		 */
+		Log::info($url . ' ' . json_encode($parameters));
 
 		/**
 		 * Check if the request has been cached.
