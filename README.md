@@ -111,4 +111,9 @@ Public endpoint is for testing-only. No data is stored in a real database.
 
 https://www.postman.com/infrasym/workspace/reasondigital/collection/960020-41f7109f-d425-47ab-89bd-d6234c688051?ctx=documentation
 
+### 6. SSL errors in Postman?
+If you're having SSL issues, set the following in your `.env`:
+```dotenv
+WEATHER_API_BASE_URL=http://api.weatherapi.com/v1
+```
 
