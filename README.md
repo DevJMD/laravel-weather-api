@@ -59,6 +59,14 @@ DB_USERNAME=<your-mysql-server-username>
 DB_PASSWORD=<your-mysql-server-password>
 ```
 
+6. Add the following to your `.env` file:
+```dotenv
+API_VERSION=1
+API_URL_PREFIX=api
+API_ROUTE_PREFIX=api.v1
+API_MIDDLEWARE=api
+```
+
 7. Generate a new JWT secret:
 ```bash
 php artisan jwt:secret
