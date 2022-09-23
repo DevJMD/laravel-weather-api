@@ -47,6 +47,12 @@ WEATHER_API_KEY=<YOUR_WEATHER_API_KEY>
 in your `.env` file:
 ```dotenv
 DB_CONNECTION=sqlite
+### MAKE SURE THE FOLLOWING IS COMMENTED OUT ###
+#DB_HOST=127.0.0.1 
+#DB_PORT=3306
+#DB_DATABASE=weather
+#DB_USERNAME=root
+#DB_PASSWORD=
 ```
 
  - _5a._ _**Optional:**_ If you're using MySQL, you'll need to create a database called `weather`, and update the database credentials in your `.env` file:
