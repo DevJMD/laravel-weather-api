@@ -12,6 +12,7 @@ environment (using 𝑘=𝑣) enables us to create abstract interfaces that can 
 
 ## Requirements
 - PHP 8.1+ (Necessary for enumeration and intersection/union type checking)
+-- PHP extension `libsodium` is also required.
 - Composer 2.0+
 - API Key for Weather API:
 	- [WeatherAPI](https://www.weatherapi.com/)
